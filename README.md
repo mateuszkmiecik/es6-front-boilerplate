@@ -2,7 +2,7 @@ es6 front end boilerplate
 =========================
 
 1. clone this repo
-2. `./setup.sh`
+2. `npm install`
 
 To build sources:
 `gulp build` (or simply `gulp`)
