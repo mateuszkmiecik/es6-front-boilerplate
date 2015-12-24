@@ -16,8 +16,8 @@ gulp.task('build', () => {
 
 // tests
 gulp.task('exec-tests', shell.task([
-  'babel-node test/* | faucet'
-]));
+  'npm test'
+], {ignoreErrors: true}));
 
 // serve
 gulp.task('serve', serve('.'));
