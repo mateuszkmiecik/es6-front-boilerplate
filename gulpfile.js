@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const shell = require('gulp-shell');
+const serve = require('gulp-serve');
 const babel = require('babelify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
@@ -13,12 +14,13 @@ gulp.task('build', () => {
         .pipe(gulp.dest('dist'));
 });
 
-
 // tests
 gulp.task('exec-tests', shell.task([
   'babel-node test/* | faucet'
 ]));
 
+// serve
+gulp.task('serve', serve('.'));
 
 // watchers
 gulp.task('autotest', ['exec-tests'], function() {

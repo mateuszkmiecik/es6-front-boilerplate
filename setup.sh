@@ -1,2 +1,2 @@
 npm install
-npm install -g babel babel-cli tape faucet
+npm install -g gulp babel babel-cli tape faucet
